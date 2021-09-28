@@ -24,11 +24,11 @@ docker run -d -p 5000:5000 carvanaproject:latest
 You should see the home page when visiting ```http://localhost:5000```.
 
 ### Example usage
-# User input location code in the index page. (Use comma to separate multiple location codes.) #
+###### User input location code in the index page. (Use comma to separate multiple location codes.) ######
 
 ![Example-usage-input](./Image/example-input.png)
 
-# Example output of ATL and TOL. #
+###### Example output of ATL and TOL. ######
 
 ![Example-usage-input](./Image/example-output.png)
 ![Example-usage-input](./Image/example-output-part2.png)
