@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<style>
+    h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
+    body {font-family: "Open Sans"}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+    <title>Carvana Project Exercise</title>
+</head>
+<body>
+    <h1>Carvana Project Exercise</h1>
+    {% for location, data in results_by_location.items() %}
+       <h2>{{location}}</h2>
+        <h3>Location Information</h3>
+            {% for info in data["LOC"] %}
+                <p> {{info}}</p>
+            {% endfor %}
+        <h3>Origin Trips</h3>
+            {% for trip in data["Trips"]["Origin Trips"] %}
+                 <p> {{trip}}</p>
+            {% endfor %}
+        <h3>Destination Trips</h3>
+            {% for trip in data["Trips"]["Destination Trips"] %}
+                 <p> {{trip}}</p>
+            {% endfor %}
+    {% endfor %}
+</body>
+</html>
+
